@@ -18,6 +18,17 @@ class ContentViewController: UIViewController {
     @IBOutlet weak fileprivate var containerView: UIView!
     var delegate: ContentViewControllerDelegate!
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupMenuButton()
+    }
+    
+    fileprivate func setupMenuButton() {
+        if !UIDevice.isPhone() {
+            navigationItem.leftBarButtonItem = nil
+        }
+    }
+    
     @IBAction fileprivate func menuAction(_ sender: Any) {
         delegate?.menuButtonPressed?()
     }

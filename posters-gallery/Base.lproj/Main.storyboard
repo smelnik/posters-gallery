@@ -11,7 +11,7 @@
         <!--Container View Controller-->
         <scene sceneID="K3y-Y7-3To">
             <objects>
-                <viewController id="nuZ-tI-MJT" customClass="ContainerViewController" customModule="slide_menu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nuZ-tI-MJT" customClass="ContainerViewController" customModule="posters_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JX2-Zc-Ibb"/>
                         <viewControllerLayoutGuide type="bottom" id="xsi-vm-Xbo"/>
@@ -79,7 +79,7 @@
         <!--Menu-->
         <scene sceneID="SGV-iv-X7g">
             <objects>
-                <viewController id="f1U-RJ-GnQ" customClass="MenuViewController" customModule="slide_menu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f1U-RJ-GnQ" customClass="MenuViewController" customModule="posters_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8fD-Je-vuM"/>
                         <viewControllerLayoutGuide type="bottom" id="e1c-Gd-msd"/>
@@ -131,8 +131,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1J-8R-kg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="Cl2-7I-dgQ" customClass="MenuDataSource" customModule="slide_menu" customModuleProvider="target"/>
-                <customObject id="ZxH-vc-wCX" customClass="MenuDelegate" customModule="slide_menu" customModuleProvider="target"/>
+                <customObject id="Cl2-7I-dgQ" customClass="MenuDataSource" customModule="posters_gallery" customModuleProvider="target"/>
+                <customObject id="ZxH-vc-wCX" customClass="MenuDelegate" customModule="posters_gallery" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="684" y="-246"/>
         </scene>
@@ -155,7 +155,7 @@
         <!--Content View Controller-->
         <scene sceneID="IjC-jz-0uK">
             <objects>
-                <viewController id="XaF-TT-Mb4" customClass="ContentViewController" customModule="slide_menu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XaF-TT-Mb4" customClass="ContentViewController" customModule="posters_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="738-kw-KAw"/>
                         <viewControllerLayoutGuide type="bottom" id="Ma7-JL-MF2"/>

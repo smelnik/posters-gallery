@@ -10,7 +10,6 @@ import Foundation
 
 class Configuration {
     static var postersURL: String {
-        // MARK: Place your URL to JSON
-        return "xxx"
+        return "http://test.php-cd.attractgroup.com/test.json"
     }
 }

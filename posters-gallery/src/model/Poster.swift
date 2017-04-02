@@ -23,7 +23,7 @@ class Poster {
             let imageURLString = json["image"] as? String,
             let imageURL = URL(string: imageURLString),
             let timestampString = json["time"] as? String,
-            let timestamp = Int(timestampString)
+            let timestamp = TimeInterval(timestampString)
         else {
             return nil
         }
@@ -32,7 +32,7 @@ class Poster {
         self.name = name
         self.summary = summary
         self.imageURL = imageURL
-        self.time = Date(unixTimestamp: TimeInterval(timestamp),
+        self.time = Date(unixTimestamp: timestamp,
                          inMilliseconds: timestampString.characters.count > 10)
     }
 }
