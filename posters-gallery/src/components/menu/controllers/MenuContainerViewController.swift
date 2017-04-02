@@ -20,7 +20,7 @@ class MenuContainerViewController: UIViewController {
         static let iPhoneInLandscapeLeftPaneWidth: CGFloat = 260
         static let iPhoneInPortraitLeftPaneGap: CGFloat = 60.0
         static let shadowOpacity: Float = 0.8
-        static let menuAnimationDuration: TimeInterval = 0.25
+        static let menuAnimationDuration: TimeInterval = 0.125
     }
     
     @IBOutlet weak fileprivate var menuContainerView: UIView!
