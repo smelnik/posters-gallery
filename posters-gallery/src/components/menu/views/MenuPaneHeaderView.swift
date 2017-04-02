@@ -1,5 +1,5 @@
 //
-//  MenuHeaderView.swift
+//  MenuPaneHeaderView.swift
 //  posters-gallery
 //
 //  Created by Developer on 3/29/17.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class MenuHeaderView: UIView {
+class MenuPaneHeaderView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
 }

@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
     
-    var containerViewController: ContainerViewController {
-        return window?.rootViewController as! ContainerViewController
+    var menuViewController: MenuContainerViewController {
+        return window?.rootViewController as! MenuContainerViewController
     }
 
     func setupAppearances() {

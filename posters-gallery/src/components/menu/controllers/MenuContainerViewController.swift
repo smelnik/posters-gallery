@@ -1,6 +1,5 @@
-
 //
-//  ContainerViewController.swift
+//  MenuContainerViewController.swift
 //  posters-gallery
 //
 //  Created by Developer on 3/28/17.
@@ -14,7 +13,7 @@ enum MenuPaneState {
     case opened
 }
 
-class ContainerViewController: UIViewController {
+class MenuContainerViewController: UIViewController {
     
     fileprivate struct Constants {
         static let iPadLeftPaneWidth: CGFloat = 320
@@ -27,8 +26,8 @@ class ContainerViewController: UIViewController {
     @IBOutlet weak fileprivate var menuContainerView: UIView!
     @IBOutlet weak fileprivate var contentContainerView: UIView!
     
-    fileprivate var menuViewController: MenuViewController!
-    fileprivate var contentViewController: ContentViewController!
+    fileprivate var menuViewController: MenuPaneViewController!
+    fileprivate var contentViewController: MenuContentViewController!
 
     @IBOutlet weak fileprivate var menuLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak fileprivate var menuWidthConstraint: NSLayoutConstraint!
@@ -106,9 +105,9 @@ class ContainerViewController: UIViewController {
 }
 
 // MARK: - Public methods
-extension ContainerViewController {
-    func showViewController(vc: UIViewController, title: String? = nil) {
-        contentViewController.showViewController(vc: vc, title: title)
+extension MenuContainerViewController {
+    func show(viewController: UIViewController, title: String? = nil) {
+        contentViewController.show(viewController: viewController, title: title)
         
         if UIDevice.isPhone() && menuPaneState == .opened {
             toggleLeftPane()
@@ -117,24 +116,24 @@ extension ContainerViewController {
 }
 
 // MARK: - ContentViewControllerDelegate
-extension ContainerViewController: ContentViewControllerDelegate {
+extension MenuContainerViewController: MenuContentViewControllerDelegate {
     func menuButtonPressed() {
         toggleLeftPane()
     }
 }
 
 // MARK: - UIGestureRecognizerDelegate
-extension ContainerViewController: UIGestureRecognizerDelegate {
+extension MenuContainerViewController: UIGestureRecognizerDelegate {
     fileprivate func addGestureRecognizers() {
         if !UIDevice.isPhone() {
             return
         }
         
-        let panAction = #selector(ContainerViewController.handlePanGesture(_:))
+        let panAction = #selector(MenuContainerViewController.handlePanGesture(_:))
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: panAction)
         view.addGestureRecognizer(panGestureRecognizer)
         
-        let tapAction = #selector(ContainerViewController.handleTapGesture(_:))
+        let tapAction = #selector(MenuContainerViewController.handleTapGesture(_:))
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: tapAction)
         tapGestureRecognizer.delegate = self
         view.addGestureRecognizer(tapGestureRecognizer)
@@ -185,17 +184,17 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
 }
 
 // MARK: - Navigation
-extension ContainerViewController {
+extension MenuContainerViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "MenuContainerSegue" {
+        if segue.identifier == "MenuPaneContainerSegue" {
             let navigationController = segue.destination as! UINavigationController
-            menuViewController = navigationController.childViewControllers[0] as! MenuViewController
+            menuViewController = navigationController.childViewControllers[0] as! MenuPaneViewController
             return
         }
         
-        if segue.identifier == "ContentContainerSegue" {
+        if segue.identifier == "MenuContentContainerSegue" {
             let navigationController = segue.destination as! UINavigationController
-            contentViewController = navigationController.childViewControllers[0] as! ContentViewController
+            contentViewController = navigationController.childViewControllers[0] as! MenuContentViewController
             contentViewController.delegate = self
             return
         }

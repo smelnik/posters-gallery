@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Container View Controller-->
+        <!--Menu Container View Controller-->
         <scene sceneID="K3y-Y7-3To">
             <objects>
-                <viewController id="nuZ-tI-MJT" customClass="ContainerViewController" customModule="posters_gallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nuZ-tI-MJT" customClass="MenuContainerViewController" customModule="posters_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JX2-Zc-Ibb"/>
                         <viewControllerLayoutGuide type="bottom" id="xsi-vm-Xbo"/>
@@ -23,7 +23,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xG5-4e-Ufb">
                                 <rect key="frame" x="260" y="0.0" width="508" height="1024"/>
                                 <connections>
-                                    <segue destination="odn-YY-oiU" kind="embed" identifier="ContentContainerSegue" id="fr2-U2-V1t"/>
+                                    <segue destination="odn-YY-oiU" kind="embed" identifier="MenuContentContainerSegue" id="fr2-U2-V1t"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqs-vu-wiD">
@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="width" constant="260" id="Mkk-D8-9hu"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="T6m-Zv-60j" kind="embed" identifier="MenuContainerSegue" id="Wda-gL-xyT"/>
+                                    <segue destination="T6m-Zv-60j" kind="embed" identifier="MenuPaneContainerSegue" id="Wda-gL-xyT"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -79,7 +79,7 @@
         <!--Menu-->
         <scene sceneID="SGV-iv-X7g">
             <objects>
-                <viewController id="f1U-RJ-GnQ" customClass="MenuViewController" customModule="posters_gallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f1U-RJ-GnQ" customClass="MenuPaneViewController" customModule="posters_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8fD-Je-vuM"/>
                         <viewControllerLayoutGuide type="bottom" id="e1c-Gd-msd"/>
@@ -131,8 +131,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1J-8R-kg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="Cl2-7I-dgQ" customClass="MenuDataSource" customModule="posters_gallery" customModuleProvider="target"/>
-                <customObject id="ZxH-vc-wCX" customClass="MenuDelegate" customModule="posters_gallery" customModuleProvider="target"/>
+                <customObject id="Cl2-7I-dgQ" customClass="MenuPaneDataSource" customModule="posters_gallery" customModuleProvider="target"/>
+                <customObject id="ZxH-vc-wCX" customClass="MenuPaneDelegate" customModule="posters_gallery" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="684" y="-246"/>
         </scene>
@@ -152,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="-62" y="446"/>
         </scene>
-        <!--Content View Controller-->
+        <!--Menu Content View Controller-->
         <scene sceneID="IjC-jz-0uK">
             <objects>
-                <viewController id="XaF-TT-Mb4" customClass="ContentViewController" customModule="posters_gallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XaF-TT-Mb4" customClass="MenuContentViewController" customModule="posters_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="738-kw-KAw"/>
                         <viewControllerLayoutGuide type="bottom" id="Ma7-JL-MF2"/>

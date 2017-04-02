@@ -1,5 +1,5 @@
 //
-//  MenuDataSource.swift
+//  MenuPaneDataSource.swift
 //  posters-gallery
 //
 //  Created by Developer on 3/29/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuDataSource: NSObject {
+class MenuPaneDataSource: NSObject {
     let menu: Menu
     
     override init() {
@@ -31,7 +31,7 @@ class MenuDataSource: NSObject {
     }
 }
 
-extension MenuDataSource: UITableViewDataSource {
+extension MenuPaneDataSource: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return menu.sections.count
     }

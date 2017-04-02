@@ -1,5 +1,5 @@
 //
-//  ContentViewController.swift
+//  MenuContentViewController.swift
 //  posters-gallery
 //
 //  Created by Developer on 3/28/17.
@@ -9,14 +9,14 @@
 import UIKit
 
 @objc
-protocol ContentViewControllerDelegate {
+protocol MenuContentViewControllerDelegate {
     @objc optional func menuButtonPressed()
 }
 
-class ContentViewController: UIViewController {
+class MenuContentViewController: UIViewController {
     
     @IBOutlet weak fileprivate var containerView: UIView!
-    var delegate: ContentViewControllerDelegate!
+    var delegate: MenuContentViewControllerDelegate!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -34,14 +34,14 @@ class ContentViewController: UIViewController {
     }
     
     
-    func showViewController(vc: UIViewController, title: String? = nil) {
+    func show(viewController: UIViewController, title: String? = nil) {
         self.title = title
         hideViewController()
-        addChildViewController(vc)
-        vc.view.frame = containerView.bounds
-        containerView.addSubview(vc.view)
-        vc.didMove(toParentViewController: self)
-        vc.view.layoutIfNeeded()
+        addChildViewController(viewController)
+        viewController.view.frame = containerView.bounds
+        containerView.addSubview(viewController.view)
+        viewController.didMove(toParentViewController: self)
+        viewController.view.layoutIfNeeded()
     }
     
     fileprivate func hideViewController() {

@@ -1,5 +1,5 @@
 //
-//  MenuViewController.swift
+//  MenuPaneViewController.swift
 //  posters-gallery
 //
 //  Created by Developer on 3/28/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class MenuPaneViewController: UIViewController {
 
     private var isInitialized = false
     @IBOutlet weak private var tableView: UITableView!
@@ -23,8 +23,8 @@ class MenuViewController: UIViewController {
     }
     
     private func initiallySelectMenuItem() {
-        self.tableView.selectRow(at: MenuDelegate.selectedIndexPath, animated: false, scrollPosition: .none)
-        let delegate = self.tableView.delegate as! MenuDelegate
-        delegate.selectRow(at: MenuDelegate.selectedIndexPath, for: self.tableView)
+        self.tableView.selectRow(at: MenuPaneDelegate.selectedIndexPath, animated: false, scrollPosition: .none)
+        let delegate = self.tableView.delegate as! MenuPaneDelegate
+        delegate.selectRow(at: MenuPaneDelegate.selectedIndexPath, for: self.tableView)
     }
 }

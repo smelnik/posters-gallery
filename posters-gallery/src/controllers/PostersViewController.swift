@@ -17,6 +17,7 @@ class PostersViewController: UIViewController {
         super.viewDidLoad()
         
         addSearchBar()
+        scrollToHideSearchBar()
         
         dataSource().reloadData {
             self.tableView.reloadData()
@@ -68,9 +69,8 @@ extension PostersViewController: UISearchBarDelegate {
         searchBar.showsCancelButton = true
         searchBar.searchBarStyle = .minimal
         searchBar.barStyle = .black
+        searchBar.sizeToFit()
         tableView.tableHeaderView = searchBar
-        
-        scrollToHideSearchBar()
     }
     
     fileprivate func scrollToHideSearchBar() {
