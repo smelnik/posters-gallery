@@ -106,8 +106,8 @@ class MenuContainerViewController: UIViewController {
 
 // MARK: - Public methods
 extension MenuContainerViewController {
-    func show(viewController: UIViewController, title: String? = nil) {
-        contentViewController.show(viewController: viewController, title: title)
+    func show(viewController: UIViewController) {
+        contentViewController.show(viewController: viewController)
         
         if UIDevice.isPhone() && menuPaneState == .opened {
             toggleLeftPane()

@@ -12,7 +12,7 @@
         <!--Posters View Controller-->
         <scene sceneID="kRy-mj-PuC">
             <objects>
-                <viewController storyboardIdentifier="PostersViewController" id="KUf-98-Wdf" customClass="PostersViewController" customModule="slide_menu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostersViewController" id="KUf-98-Wdf" customClass="PostersViewController" customModule="posters_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A7g-nF-THC"/>
                         <viewControllerLayoutGuide type="bottom" id="2sY-xX-e9b"/>
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PosterCell" id="cND-uw-GoR" customClass="PosterCell" customModule="slide_menu" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PosterCell" id="cND-uw-GoR" customClass="PosterCell" customModule="posters_gallery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cND-uw-GoR" id="Zej-wr-XUD">
@@ -96,7 +96,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VRt-kd-gVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="n8a-be-ktX" customClass="PostersDataSource" customModule="slide_menu" customModuleProvider="target"/>
+                <customObject id="n8a-be-ktX" customClass="PostersDataSource" customModule="posters_gallery" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="240.80000000000001" y="44.527736131934034"/>
         </scene>
@@ -119,7 +119,7 @@
         <!--Poster Details View Controller-->
         <scene sceneID="Oli-IA-f0q">
             <objects>
-                <viewController id="CMh-jl-i8L" customClass="PosterDetailsViewController" customModule="slide_menu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CMh-jl-i8L" customClass="PosterDetailsViewController" customModule="posters_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B9D-qM-qg5"/>
                         <viewControllerLayoutGuide type="bottom" id="ec6-EI-fIQ"/>
@@ -138,7 +138,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PosterDetailsCell" id="qS6-1D-KK5" customClass="PosterDetailsCell" customModule="slide_menu" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PosterDetailsCell" id="qS6-1D-KK5" customClass="PosterDetailsCell" customModule="posters_gallery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="42" width="337" height="519"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -204,7 +204,7 @@
         <!--Fake View Controller-->
         <scene sceneID="c2o-c5-gyv">
             <objects>
-                <viewController storyboardIdentifier="FakeViewController" id="3W6-d4-gEM" customClass="FakeViewController" customModule="slide_menu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FakeViewController" id="3W6-d4-gEM" customClass="FakeViewController" customModule="posters_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9HS-D0-uGd"/>
                         <viewControllerLayoutGuide type="bottom" id="P8M-63-9Fq"/>

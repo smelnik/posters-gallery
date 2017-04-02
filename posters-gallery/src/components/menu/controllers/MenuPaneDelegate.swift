@@ -41,9 +41,10 @@ extension MenuPaneDelegate: UITableViewDelegate {
             let storyboard = UIStoryboard(name: "Content", bundle: nil)
             let identifier = String(describing: viewControllerType)
             let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
+            viewController.title = viewController.title ?? menuItem.title
             
             let menuViewController = AppDelegate.shared().menuViewController
-            menuViewController.show(viewController: viewController, title: menuItem.title)
+            menuViewController.show(viewController: viewController)
         }
     }
 }

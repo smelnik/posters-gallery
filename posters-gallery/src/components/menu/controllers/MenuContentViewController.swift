@@ -34,8 +34,8 @@ class MenuContentViewController: UIViewController {
     }
     
     
-    func show(viewController: UIViewController, title: String? = nil) {
-        self.title = title
+    func show(viewController: UIViewController) {
+        self.title = viewController.title
         hideViewController()
         addChildViewController(viewController)
         viewController.view.frame = containerView.bounds
